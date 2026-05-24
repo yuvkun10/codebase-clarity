@@ -20,11 +20,14 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "check": "npm run lint && npm test && npm run build && npm run audit:moderate && npm run deps:outdated",
+    "audit:moderate": "npm audit --audit-level=moderate",
+    "deps:outdated": "npm outdated",
     "lint": "eslint \"src/**/*.ts\" \"tests/**/*.ts\"",
     "test": "vitest run"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=20.19.0"
   },
   "keywords": [
     "codebase",
@@ -34,11 +37,11 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@types/node": "^24.10.1",
-    "eslint": "^9.39.1",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.4",
-    "vitest": "^4.0.13"
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.9.1",
+    "eslint": "^10.4.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.4",
+    "vitest": "^4.1.7"
   }
 }

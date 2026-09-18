@@ -114,7 +114,7 @@ These values mirror the CLI concepts:
 - `CODEBASE_CLARITY_MAX_FILES` maps to `--max-files`.
 - `CODEBASE_CLARITY_MAX_FILE_SIZE_KB` maps to `--max-file-size-kb`.
 
-## Codebase Structure
+## Repository map
 
 ```text
 .
@@ -157,3 +157,7 @@ Important areas:
 - Reports can include filenames, dependency names, imports, exports, and project structure. Review reports before sharing them publicly.
 - Do not put secrets in `.env.example`, README examples, reports, test fixtures, or committed config.
 - Keep private notes and machine-specific files out of version control.
+
+## Documentation
+
+- [Architecture diagram source](docs/architecture.mmd)

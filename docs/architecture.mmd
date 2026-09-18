@@ -1,0 +1,8 @@
+flowchart LR
+    User[User chooses target repo] --> CLI[CLI parses options]
+    CLI --> Walker[Safe file walker]
+    Walker --> Filters[Ignore generated and local-only paths]
+    Filters --> Signals[Detect languages frameworks imports exports]
+    Signals --> Modules[Group files into module areas]
+    Modules --> Report[Plain-English architecture report]
+    Report --> Output[Stdout or output file]
